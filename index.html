@@ -12,6 +12,14 @@
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+		
+		<script type="text/javascript" src="beziercanvas.js"></script>
+		<style type="text/css">
+			#bezier_canvas{
+				width = 640px;
+				height = 480px;
+			}
+		</style>
 	</head>
 	<body>
 		<div>
@@ -26,10 +34,16 @@
 					<a href="/contact">Contact</a>
 				</p>
 			</nav>
-			<div></div>
+			
+			<div id="canvas_area">
+				<canvas id="bezier_canvas" width="640" height="480">
+					<p>If you're seeing this, you're browser isn't supported.</p>
+				</canvas>
+			</div>
+			
 			<footer>
 				<p>
-					&copy; Copyright  by 100290170
+					&copy; Copyright  by Chris Little
 				</p>
 			</footer>
 		</div>
