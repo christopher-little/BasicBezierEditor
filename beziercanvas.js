@@ -61,8 +61,16 @@ function mouseUpEvent(e){
 
 function mouseMoveEvent(e){
 	// Keep track of the mouse position
-	mouseX = e.offsetX;
-	mouseY = e.offsetY;
+	if(e.offsetX || e.offsetX == 0) //Chrome/Opera
+	{
+		mouseX = e.offsetX;
+		mouseY = e.offsetY;
+	}
+	else if(e.layerX || e.layerX == 0) //Firefox
+	{
+		mouseX = e.layerX - canvas.offsetLeft;
+		mouseY = e.layerY - canvas.offsetTop;
+	}
 	
 	// When the mouse hovers over the control points, set cursor to a "move" cursor
 	if(pointOverlap(mouseX,mouseY, ctrlPnts[0][0]-halfPointSize, ctrlPnts[0][1]-halfPointSize, pointSize, pointSize)
