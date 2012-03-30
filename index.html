@@ -15,37 +15,43 @@
 		
 		<script type="text/javascript" src="beziercanvas.js"></script>
 		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+				
+				background-color: #DDD;
+				
+				font-family: Georgia
+			}
+			#body_area{
+				width: 960px;
+				
+				margin: 20px auto;
+				
+				text-align: center;
+			}
+			#canvas_area{
+				width: 640px;
+				
+				margin: auto;
+			}
 			#bezier_canvas{
-				width = 640px;
-				height = 480px;
+				border: 1px solid black;
+				
+				background-color: #FFF;
 			}
 		</style>
 	</head>
 	<body>
-		<div>
-			<header>
-				<h1>index</h1>
-			</header>
-			<nav>
-				<p>
-					<a href="/">Home</a>
-				</p>
-				<p>
-					<a href="/contact">Contact</a>
-				</p>
-			</nav>
+		<div id="body_area">
+			<h1>Basic Bezier Editor</h1>
 			
 			<div id="canvas_area">
 				<canvas id="bezier_canvas" width="640" height="480">
-					<p>If you're seeing this, you're browser isn't supported.</p>
+					<p>If you're reading this, you're browser doesn't support Canvas.
+					I suggest using Google Chrome or Firefox.</p>
 				</canvas>
 			</div>
-			
-			<footer>
-				<p>
-					&copy; Copyright  by Chris Little
-				</p>
-			</footer>
 		</div>
 	</body>
 </html>
